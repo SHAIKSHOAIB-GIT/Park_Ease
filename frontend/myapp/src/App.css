@@ -1,0 +1,125 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.auth-page {
+  background: linear-gradient(135deg,#0f172a,#1e293b);
+  color: white;
+  min-height: 100vh;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px;
+  gap: 60px;
+  animation: fadeIn 1s ease;
+}
+
+.hero-left h1 {
+  font-size: 48px;
+}
+
+.hero-features span {
+  display: block;
+  margin: 10px 0;
+  color: #22c55e;
+}
+
+.auth-card {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.4);
+  animation: slideUp .8s ease;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  background: #4f46e5;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.auth-switch {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.auth-switch button {
+  flex: 1;
+  padding: 10px;
+}
+
+.how, .reviews {
+  padding: 60px;
+  background: white;
+  color: black;
+  text-align: center;
+}
+
+.review {
+  margin: 15px;
+  font-size: 18px;
+}
+
+.contact {
+  background: #020617;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity:0 }
+  to { transform: translateY(0); opacity:1 }
+}
+

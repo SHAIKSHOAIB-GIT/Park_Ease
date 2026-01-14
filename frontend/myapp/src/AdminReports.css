@@ -1,0 +1,242 @@
+.admin-report-page {
+  padding: 30px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.admin-header h2 {
+  margin: 0;
+  color: #4338ca;
+}
+
+.back-btn {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.table-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.status.booked { color: #16a34a; }
+.status.cancelled { color: #dc2626; }
+.status.completed { color: #64748b; }
+
+button.danger {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.manage-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+}
+
+.modal-card textarea {
+  width: 100%;
+  height: 80px;
+  margin: 10px 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+/* ===================== ICON BUTTONS ===================== */
+.icon-btn {
+  background: #eef2ff;
+  color: #4338ca;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.icon-btn:hover {
+  background: #c7d2fe;
+  transform: scale(1.05);
+}
+
+/* ===================== ANALYTICS GRID ===================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  margin: 20px 0 30px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.stat-card h4 {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.stat-card p {
+  margin: 6px 0 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ===================== TABLE ENHANCEMENTS ===================== */
+.table-card table tr:hover {
+  background: #f8fafc;
+}
+
+.table-card th {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* ===================== STATUS COLORS ===================== */
+.status.booked {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.status.cancelled {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.status.completed {
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* ===================== DANGER BUTTON SMALL ===================== */
+button.danger {
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+/* ===================== DROPDOWN DELETE ===================== */
+.dropdown-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dropdown-row select {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+.icon-delete {
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-delete:hover {
+  background: #fecaca;
+}
+.filter-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-bar select,
+.filter-bar input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}

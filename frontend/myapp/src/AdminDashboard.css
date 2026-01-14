@@ -1,0 +1,310 @@
+/* ================= ROOT ================= */
+* {
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f3f4f6;
+}
+
+/* ================= LAYOUT ================= */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-content {
+  margin-left: 260px;
+  padding: 24px;
+  width: calc(100% - 260px);
+}
+
+/* ================= SIDEBAR ================= */
+/* ========== SIDEBAR ========== */
+.admin-sidebar {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #0f172a; /* deep navy */
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  box-shadow: 4px 0 20px rgba(0,0,0,.25);
+  z-index: 100;
+}
+
+/* Brand */
+.admin-sidebar h3 {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 28px;
+  color: #fff;
+  letter-spacing: .5px;
+}
+
+/* Buttons */
+.admin-sidebar button {
+  background: transparent;
+  border: none;
+  color: #cbd5f5;
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: .2s ease;
+}
+
+/* Hover */
+.admin-sidebar button:hover {
+  background: rgba(99,102,241,.15);
+  color: #fff;
+}
+
+/* Active feel */
+.admin-sidebar button:active {
+  transform: scale(.98);
+}
+
+/* Separator */
+.admin-sidebar hr {
+  border: none;
+  height: 1px;
+  background: rgba(255,255,255,.08);
+  margin: 16px 0;
+}
+
+/* Logout */
+.admin-sidebar .logout {
+  margin-top: auto;
+  background: rgba(239,68,68,.15);
+  color: #fecaca;
+  text-align: center;
+}
+
+.admin-sidebar .logout:hover {
+  background: rgba(239,68,68,.25);
+  color: #fff;
+}
+
+
+/* ================= HEADER ================= */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg,#4f46e5,#7c3aed);
+  padding: 16px 20px;
+  border-radius: 14px;
+  color: white;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+.admin-title h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.admin-title span {
+  font-size: 12px;
+  opacity: .8;
+}
+
+/* ================= STATS ================= */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(130px,1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg,#6366f1,#8b5cf6);
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+
+.stat-card h4 {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.stat-card p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ================= CARDS ================= */
+.card {
+  background: white;
+  padding: 14px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #4338ca;
+}
+
+/* ================= INPUTS ================= */
+input, select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+/* ================= BUTTONS ================= */
+button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+button:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.btn-toggle { background:#f59e0b; }
+.btn-remove { background:#ef4444; }
+
+/* ================= SLOT GRID ================= */
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);   /* EXACTLY 4 per row */
+  gap: 12px;
+}
+
+/* ================= SLOT CARD ================= */
+.slot-card {
+  background: white;
+  padding: 12px;
+  border-radius: 14px;
+  box-shadow: 0 5px 14px rgba(0,0,0,.08);
+  text-align: center;
+  transition: .2s;
+}
+
+.slot-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.slot-card h4 {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+.slot-card p {
+  margin: 2px 0;
+  font-size: 12px;
+  color: #475569;
+}
+
+
+
+.slot-card.booked {
+  background: #fee2e2;
+  border: 2px solid #dc2626;
+}
+
+/* ================= ACTIONS ================= */
+.actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+/* ================= BOOKED USER ================= */
+.user-box {
+  background: white;
+  border: 1px dashed #ef4444;
+  padding: 6px;
+  border-radius: 10px;
+  font-size: 11px;
+  margin-top: 6px;
+}
+
+.view-user-btn {
+  width: 100%;
+  background: #3b82f6;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* ================= HEADINGS ================= */
+h2 {
+  font-size: 18px;
+  margin: 18px 0 12px;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.status-pill.working {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-pill.busy {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-pill.under_construction {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+.slot-card.disabled {
+  opacity: .45;
+  filter: grayscale(0.6);
+  border: 2px dashed #f59e0b;
+}
+
+
+/* Disable only BOOK button, not admin controls */
+/* Allow buttons to still work */
+.slot-card.disabled .actions {
+  pointer-events: auto;
+}
+
+.slot-card {
+  transition: all .25s ease;
+}
+
+.slot-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,.2);
+}
+
